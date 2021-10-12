@@ -1,0 +1,13 @@
+.button-link {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  color: $color-text-dark;
+  letter-spacing: 0.1rem;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+  }
+}

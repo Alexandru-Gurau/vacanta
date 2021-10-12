@@ -3,12 +3,25 @@
   grid-row: 1 / 2;
 
   width: 100%;
-  min-height: 10rem;
+  min-height: 15rem;
   background-color: $color-secondary;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: $bp-small) {
+    min-height: 10rem;
+  }
+
+  img {
+    height: 10rem;
+    width: auto;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 6rem;
+    }
+  }
 }
 .navigation {
   grid-column: 1 / -1;
@@ -17,9 +30,35 @@
   width: 100%;
   min-height: 5rem;
 
-  background-color: darkgreen; //trebuie schimbat
+  background-color: $color-primary;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.welcome {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+
+  width: 100vw;
+  min-height: 70vh;
+
+  background-image: url(../../images/wallpaper--2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: $bp-medium) {
+    min-height: 35rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    min-height: 30rem;
+  }
+}
+.about {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+
+  width: 100%;
+  min-height: 90rem;
 }
