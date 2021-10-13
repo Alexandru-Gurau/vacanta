@@ -11,3 +11,26 @@
     margin: 0 0.5rem;
   }
 }
+.button-cta {
+  text-decoration: none;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  background-color: $color-tertiary;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  box-shadow: $button-shadow;
+  transition: all 0.2s ease-in;
+}
+.button-cta:visited {
+  box-shadow: $button-shadow;
+  transform: translateY(0);
+}
+.button-cta:hover {
+  transform: translateY(-5px);
+  box-shadow: $button-shadow-hover;
+}
+.button-cta:active {
+  transform: translateY(3px);
+  box-shadow: $button-shadow;
+}

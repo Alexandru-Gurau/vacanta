@@ -48,11 +48,41 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-large) {
+    min-height: 50vh;
+  }
+
   @media only screen and (max-width: $bp-medium) {
     min-height: 35rem;
   }
   @media only screen and (max-width: $bp-small) {
-    min-height: 30rem;
+    min-height: 35rem;
+    align-items: flex-end;
+  }
+
+  &__box {
+    height: 30rem;
+    width: 40rem;
+    border-radius: 3px;
+    padding: 2rem;
+    background-color: $color-primary;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 50rem;
+      height: 30rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      height: 25rem;
+    }
   }
 }
 .about {
