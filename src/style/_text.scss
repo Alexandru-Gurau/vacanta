@@ -1,5 +1,40 @@
 // Headers
+.header {
+  text-transform: uppercase;
+  color: $color-text-dark;
+
+  &__big {
+    font-size: 4rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3rem;
+    }
+  }
+  &__normal {
+    font-size: 2.5rem;
+  }
+  &__hand {
+    text-transform: lowercase;
+    font-family: $text-hand;
+    font-size: 4rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3rem;
+    }
+  }
+}
 
 // Paragraphs
+.quottes {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
 
 // Specials
+.center {
+  text-align: center;
+}
+.margin-y {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}

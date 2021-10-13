@@ -60,5 +60,30 @@
   grid-row: 4 / 5;
 
   width: 100%;
-  min-height: 90rem;
+  min-height: 140rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__adv {
+    min-height: 80rem;
+    width: 100%;
+    background-color: $color-tertiary;
+    padding: 5rem 20%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 5rem 10%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      padding: 5rem 5%;
+      min-height: 100rem;
+    }
+  }
 }
