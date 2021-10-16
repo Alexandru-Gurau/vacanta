@@ -35,3 +35,32 @@
     }
   }
 }
+
+// Background picture
+.bkg-pic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// trebuie mutat
+.small-box {
+  width: 50rem;
+  height: 30rem;
+  border-radius: 3px;
+  padding: 2rem;
+  background-color: $color-primary;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 50rem;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    height: 25rem;
+    width: 40rem;
+  }
+}
