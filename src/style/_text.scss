@@ -48,3 +48,12 @@
 .text-white {
   color: white;
 }
+
+// link
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-text-dark;
+  font-size: 2rem;
+  // margin-top: 1rem;
+}
