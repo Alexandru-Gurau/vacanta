@@ -34,3 +34,15 @@
   transform: translateY(3px);
   box-shadow: $button-shadow;
 }
+
+.button-carousel {
+  height: 5rem;
+  width: 5rem;
+  margin: 0 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 0 0.5rem;
+  }
+}
