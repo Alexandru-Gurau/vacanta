@@ -75,10 +75,6 @@
   align-items: center;
   justify-content: flex-start;
 
-  @media only screen and (max-width: $bp-small) {
-    margin: 5rem 0;
-  }
-
   &__adv {
     min-height: 80rem;
     width: 100%;
