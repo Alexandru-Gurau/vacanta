@@ -35,6 +35,28 @@
   box-shadow: $button-shadow;
 }
 
+.button-readmore {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: $color-text-dark;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: $button-shadow;
+  transition: all 0.2s ease-in-out;
+}
+.button-readmore:hover {
+  transform: translateY(-5px);
+  box-shadow: $button-shadow-hover;
+}
+.button-readmore:active {
+  transform: translateY(3px);
+  box-shadow: $button-shadow;
+}
+
 .button-carousel {
   height: 5rem;
   width: 5rem;
@@ -45,4 +67,12 @@
   @media only screen and (max-width: $bp-small) {
     margin: 0 0.5rem;
   }
+}
+
+// MODAL
+// close btn
+.button-x {
+  height: 3.5rem;
+  width: auto;
+  cursor: pointer;
 }

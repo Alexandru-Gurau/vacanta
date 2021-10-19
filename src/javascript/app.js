@@ -1,6 +1,20 @@
 'use strict';
-// REVIEWS
+// BuTTON readMore about
+const modalAbout = document.querySelector('#modalAbout');
+const btnAbout = document.getElementById('btn-more-about');
+const btnAboutClose = document.getElementById('btn-closeModal');
 
+function openModal() {
+  modalAbout.classList.remove('hidden');
+}
+function closeModal() {
+  modalAbout.classList.add('hidden');
+}
+
+btnAbout.addEventListener('click', openModal);
+btnAboutClose.addEventListener('click', closeModal);
+
+// REVIEWS sliders
 const btnLeft = document.querySelector('#btn--left');
 const btnRight = document.querySelector('#btn--right');
 

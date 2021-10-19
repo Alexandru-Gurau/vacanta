@@ -100,16 +100,13 @@
     }
   }
   &__box {
-    height: 60rem;
+    height: 70rem;
     width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    @media only screen and (max-width: $bp-large) {
-      height: 70rem;
-    }
     @media only screen and (max-width: $bp-medium) {
       margin-top: -5rem;
       height: 55rem;

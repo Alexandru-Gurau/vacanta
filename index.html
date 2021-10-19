@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style/main.scss" />
     <script src="./src/javascript/app.js" defer></script>
-    <title>Vacantion</title>
+    <title>My trip</title>
   </head>
   <body>
     <section class="logo">
@@ -58,7 +58,7 @@
       <div class="about__box">
         <div class="about__box__text">
           <h2 class="header header__normal">
-            Lorem ipsum dolor sit amet consectetur.
+            Montains, hiking and stuning locations.
           </h2>
           <p class="margin-y">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
@@ -73,9 +73,7 @@
             officia similique eum, consectetur doloremque! Vitae, sit
             voluptatibus. Illum voluptate doloribus labore alias iste.
           </p>
-          <a href="https://bennettfeely.com/clippy/" class="button-cta"
-            >Read more</a
-          >
+          <button class="button-readmore" id="btn-more-about">Read more</button>
         </div>
         <div class="about__box__picture">
           <div class="picture-onPage">
@@ -112,9 +110,7 @@
           consectetur tempora quam sapiente. Ab accusamus itaque deleniti
           provident velit at expedita inventore laborum quaerat.
         </p>
-        <a href="https://bennettfeely.com/clippy/" class="button-cta"
-          >Read more</a
-        >
+        <button class="button-readmore">Read more</button>
       </div>
     </div>
     <div class="reviews">
@@ -192,6 +188,60 @@
     <div class="legal">
       <h4 class="header header__small">©2021 - All rights are reserved</h4>
       <h4 class="header header__small">WEBDESIGN by al.webdesign</h4>
+    </div>
+
+    <div class="modal hidden" id="modalAbout">
+      <div class="modal__about">
+        <div class="modal__about__nav">
+          <img
+            src="./icons/btn-x.svg"
+            alt=""
+            class="button-x"
+            id="btn-closeModal"
+          />
+        </div>
+        <div class="modal__about__container">
+          <img src="./images/wallpaper--4.jpg" alt="nature" />
+          <h2 class="header header__normal">
+            Montains, hiking and stuning locations.
+          </h2>
+          <p class="margin-y">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+            nobis amet! Labore ex quam quod voluptatibus aliquam eius. Quae cum
+            consectetur tempora quam sapiente. Ab accusamus itaque deleniti
+            provident velit at expedita inventore laborum quaerat.
+          </p>
+          <p class="margin-y">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod
+            repellat animi dolore laborum praesentium facilis neque hic
+            consequatur et harum optio fugiat maiores in totam ex, quisquam
+            officia similique eum, consectetur doloremque! Vitae, sit
+            voluptatibus. Illum voluptate doloribus labore alias iste.
+          </p>
+          <p class="margin-y">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+            rerum nulla! Sint ad alias architecto maxime, odio maiores
+            aspernatur praesentium quam nihil dolor voluptate, veritatis
+            pariatur iusto sed asperiores! Voluptatem nisi sunt vitae optio ipsa
+            provident at deleniti obcaecati ipsam dolore explicabo quia repellat
+            facilis omnis, illum officiis quas, inventore minima consequatur.
+            Distinctio consequatur quae tempore nisi nostrum, dolorum doloremque
+            dolor dignissimos dolore tenetur similique facilis expedita modi
+            illo repellendus esse accusantium vitae harum cupiditate.
+            Accusantium assumenda minus veniam illum laborum, in rem porro
+            nostrum quibusdam dolorum provident quam minima.
+          </p>
+          <p class="margin-y">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            corrupti vero voluptatem asperiores libero perspiciatis, molestiae
+            eum, eaque ut amet corporis recusandae enim qui repellendus harum
+            quasi, nihil unde. Reprehenderit iure fuga beatae nobis. Obcaecati
+            earum velit ratione esse cumque doloribus aliquam, tempora quo
+            molestiae quidem maiores debitis repellendus nobis architecto modi
+            accusantium quam numquam.
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
