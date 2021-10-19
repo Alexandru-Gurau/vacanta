@@ -1,18 +1,40 @@
 'use strict';
-// BuTTON readMore about
+// MODAL ABOUT
 const modalAbout = document.querySelector('#modalAbout');
 const btnAbout = document.getElementById('btn-more-about');
-const btnAboutClose = document.getElementById('btn-closeModal');
+const btnAboutClose = document.getElementById('btn-closeModalAbout');
 
-function openModal() {
+function openModalAbout() {
   modalAbout.classList.remove('hidden');
 }
-function closeModal() {
+function closeModalAbout() {
   modalAbout.classList.add('hidden');
 }
+btnAbout.addEventListener('click', openModalAbout);
+btnAboutClose.addEventListener('click', closeModalAbout);
+// //////////////////////////////////////////////////////
 
-btnAbout.addEventListener('click', openModal);
-btnAboutClose.addEventListener('click', closeModal);
+// MODAL EXAMPLE
+const modalExample = document.querySelector('#modalExample');
+const btnExample = document.getElementById('btn-more-example');
+const btnExampleClose = document.getElementById('btn-closeModalExample');
+
+function openModalExample() {
+  modalExample.classList.remove('hidden');
+}
+function closeModalExample() {
+  modalExample.classList.add('hidden');
+}
+btnExample.addEventListener('click', openModalExample);
+btnExampleClose.addEventListener('click', closeModalExample);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeModalAbout();
+    closeModalExample();
+  }
+});
+// //////////////////////////////////////////////////////
 
 // REVIEWS sliders
 const btnLeft = document.querySelector('#btn--left');
@@ -61,3 +83,4 @@ btnRight.addEventListener('click', function (e) {
   e.preventDefault();
   nextSlide(1);
 });
+// //////////////////////////////////////////////////////
