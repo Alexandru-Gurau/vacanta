@@ -34,6 +34,9 @@
   transform: translateY(3px);
   box-shadow: $button-shadow;
 }
+.button-cta:focus {
+  outline: 0;
+}
 
 .button-menu {
   background-color: $color-primary;
@@ -50,6 +53,9 @@
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
   }
+}
+.button-menu:focus {
+  outline: 0;
 }
 
 .button-readmore {
@@ -72,6 +78,9 @@
 .button-readmore:active {
   transform: translateY(3px);
   box-shadow: $button-shadow;
+}
+.button-readmore:focus {
+  outline: 0;
 }
 
 .button-carousel {

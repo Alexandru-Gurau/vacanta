@@ -65,6 +65,42 @@
   }
 }
 
+.modal-account {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(black, 0.7);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    height: 50rem;
+    width: 60rem;
+    background-color: white;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__navigation {
+    height: 5rem;
+    width: 100%;
+    padding: 0 2%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
 .hidden {
   display: none;
 }

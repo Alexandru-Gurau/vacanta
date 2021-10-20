@@ -28,12 +28,6 @@ function closeModalExample() {
 btnExample.addEventListener('click', openModalExample);
 btnExampleClose.addEventListener('click', closeModalExample);
 
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
-    closeModalAbout();
-    closeModalExample();
-  }
-});
 // //////////////////////////////////////////////////////
 
 // REVIEWS sliders
@@ -84,3 +78,26 @@ btnRight.addEventListener('click', function (e) {
   nextSlide(1);
 });
 // //////////////////////////////////////////////////////
+
+// BUTTON ACCOUNT
+const btnAccount = document.getElementById('btn-account');
+const modalAccount = document.querySelector('#modal-account');
+const btnCloseModalAccount = document.getElementById('btn-closeModalAccount');
+
+const openModalAccount = () => {
+  modalAccount.classList.remove('hidden');
+};
+const closeModalAccount = () => {
+  modalAccount.classList.add('hidden');
+};
+
+btnAccount.addEventListener('click', openModalAccount);
+btnCloseModalAccount.addEventListener('click', closeModalAccount);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeModalAbout();
+    closeModalExample();
+    closeModalAccount();
+  }
+});
