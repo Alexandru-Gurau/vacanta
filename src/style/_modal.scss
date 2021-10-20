@@ -68,7 +68,7 @@
 .modal-account {
   height: 100%;
   width: 100%;
-  background-color: rgba(black, 0.7);
+  background-color: rgba(black, 0.8);
   backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
@@ -89,6 +89,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 35rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      height: 55rem;
+      border-radius: 0;
+    }
   }
   &__navigation {
     height: 5rem;
