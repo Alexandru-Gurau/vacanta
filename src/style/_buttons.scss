@@ -35,6 +35,22 @@
   box-shadow: $button-shadow;
 }
 
+.button-menu {
+  background-color: $color-primary;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  background-color: white;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
 .button-readmore {
   font-size: 1.4rem;
   letter-spacing: 2px;
