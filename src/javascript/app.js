@@ -101,3 +101,38 @@ document.addEventListener('keydown', function (e) {
     closeModalAccount();
   }
 });
+
+// CONNECT TO YOUR ACCOUNT
+const btnLogin = document.getElementById('button-login');
+const btnSignup = document.getElementById('button-signup');
+const boxLogin = document.querySelector('#box-login');
+const boxSignup = document.querySelector('#box-signup');
+const btnConnect = document.getElementById('buttonConnect');
+const btnRegister = document.getElementById('buttonRegister');
+
+const loginLayout = () => {
+  btnLogin.classList.add('button-active');
+  btnSignup.classList.remove('button-active');
+  boxLogin.classList.remove('hidden');
+  boxSignup.classList.add('hidden');
+};
+
+const signupLayout = () => {
+  btnLogin.classList.remove('button-active');
+  btnSignup.classList.add('button-active');
+  boxLogin.classList.add('hidden');
+  boxSignup.classList.remove('hidden');
+};
+
+btnLogin.addEventListener('click', loginLayout);
+btnSignup.addEventListener('click', signupLayout);
+
+btnConnect.addEventListener('click', function () {
+  alert('Loged id');
+  closeModalAccount();
+});
+
+btnRegister.addEventListener('click', function () {
+  alert('Succesfuly. You can login now!');
+  loginLayout();
+});

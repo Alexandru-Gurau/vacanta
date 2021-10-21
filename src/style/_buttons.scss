@@ -38,6 +38,7 @@
   outline: 0;
 }
 
+// NAVIGATION BUTTON
 .button-menu {
   background-color: $color-primary;
   font-size: 1.6rem;
@@ -58,6 +59,7 @@
   outline: 0;
 }
 
+// READ MORE BUTTON
 .button-readmore {
   font-size: 1.4rem;
   letter-spacing: 2px;
@@ -83,6 +85,7 @@
   outline: 0;
 }
 
+// MODAL READ MORE BUTTON
 .button-carousel {
   height: 5rem;
   width: 5rem;
@@ -101,4 +104,31 @@
   height: 3.5rem;
   width: auto;
   cursor: pointer;
+}
+
+// LOG IN OR SIGN UP BUTTON
+.button-account {
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: $color-text-dark;
+  transition: all 0.2s ease-in-out;
+}
+.button-active {
+  color: $color-tertiary;
+  font-size: 3rem;
+}
+
+.button-connect {
+  padding: 1rem 2rem;
+  letter-spacing: 2px;
+  width: 30rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: $button-shadow;
 }
