@@ -80,7 +80,7 @@
   align-items: center;
 
   &__container {
-    height: auto;
+    height: 50rem;
     width: 60rem;
     background-color: white;
     border-radius: 5px;
@@ -148,6 +148,30 @@
       border: none;
       border-bottom: 1px solid $color-text-dark;
     }
+    &__message {
+      height: 33rem;
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__message {
+    height: 33rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__registred {
+    height: 33rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

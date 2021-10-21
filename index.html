@@ -321,19 +321,37 @@
           <button class="button-account" id="button-signup">Sign Up</button>
         </div>
         <div class="modal-account__login" id="box-login">
-          <form action="/">
-            <input type="text" placeholder="Your username..." />
-            <input type="password" placeholder="Your password..." />
+          <form action="/" id="loginForm" class="">
+            <input type="text" placeholder="Your username..." class="input" />
+            <input
+              type="password"
+              placeholder="Your password..."
+              class="input"
+            />
           </form>
           <button class="button-connect" id="buttonConnect">Connect</button>
         </div>
+        <div class="modal-account__message hidden" id="box-message">
+          <h2 class="header header--success">You have succesfuly loged in</h2>
+        </div>
         <div class="modal-account__login hidden" id="box-signup">
           <form action="/">
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
+            <input
+              type="text"
+              placeholder="Username"
+              class="input"
+              id="input-signup-username"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="input"
+              id="input-signup-password"
+            />
           </form>
           <button class="button-connect" id="buttonRegister">Register</button>
         </div>
+        <div class="modal-account__registred hidden" id="box-registred"></div>
       </div>
     </div>
   </body>

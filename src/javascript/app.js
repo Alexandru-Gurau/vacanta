@@ -79,6 +79,7 @@ btnRight.addEventListener('click', function (e) {
 });
 // //////////////////////////////////////////////////////
 
+// ACCOUNT MODAL
 // BUTTON ACCOUNT
 const btnAccount = document.getElementById('btn-account');
 const modalAccount = document.querySelector('#modal-account');
@@ -86,6 +87,9 @@ const btnCloseModalAccount = document.getElementById('btn-closeModalAccount');
 
 const openModalAccount = () => {
   modalAccount.classList.remove('hidden');
+  boxMessage.classList.add('hidden');
+  boxLogin.classList.remove('hidden');
+  clearInputs();
 };
 const closeModalAccount = () => {
   modalAccount.classList.add('hidden');
@@ -109,12 +113,32 @@ const boxLogin = document.querySelector('#box-login');
 const boxSignup = document.querySelector('#box-signup');
 const btnConnect = document.getElementById('buttonConnect');
 const btnRegister = document.getElementById('buttonRegister');
+const loginForm = document.querySelector('#loginForm');
+const boxMessage = document.getElementById('box-message');
+const boxRegistred = document.getElementById('box-registred');
+const inputs = document.querySelectorAll('.input');
+const inputSignUpUsername = document.querySelector('#input-signup-username');
+const inputSignUppassword = document.querySelector('#input-signup-password');
+
+const clearInputs = () => {
+  inputs.forEach((input) => (input.value = ''));
+};
+const signUpMessage = () => {
+  const success = `<h2 class="header header--success">Account created, please login</h2>`;
+  const failed = `<h2 class="header header--failed">Please try again</h2>`;
+  // if (inputsSignUpMessage.value !== '') {
+  //   boxRegistred.innerHTML = success;
+  // } else {
+  //   boxRegistred.innerHTML = failed;
+  // }
+};
 
 const loginLayout = () => {
   btnLogin.classList.add('button-active');
   btnSignup.classList.remove('button-active');
   boxLogin.classList.remove('hidden');
   boxSignup.classList.add('hidden');
+  boxRegistred.classList.add('hidden');
 };
 
 const signupLayout = () => {
@@ -128,11 +152,18 @@ btnLogin.addEventListener('click', loginLayout);
 btnSignup.addEventListener('click', signupLayout);
 
 btnConnect.addEventListener('click', function () {
-  alert('Loged id');
-  closeModalAccount();
+  boxLogin.classList.add('hidden');
+  boxMessage.classList.remove('hidden');
+  setTimeout(closeModalAccount, 2500);
 });
 
 btnRegister.addEventListener('click', function () {
-  alert('Succesfuly. You can login now!');
-  loginLayout();
+  boxSignup.classList.add('hidden');
+  boxRegistred.classList.remove('hidden');
+  if (inputSignUpUsername.value == 0 && inputSignUppassword.value == 0) {
+    boxRegistred.innerHTML = `<h2 class="header header--failed">Please try again</h2>`;
+  } else {
+    boxRegistred.innerHTML = `<h2 class="header header--success">Account created, please login</h2>`;
+  }
+  setTimeout(loginLayout, 2500);
 });
