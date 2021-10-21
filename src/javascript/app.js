@@ -123,15 +123,6 @@ const inputSignUppassword = document.querySelector('#input-signup-password');
 const clearInputs = () => {
   inputs.forEach((input) => (input.value = ''));
 };
-const signUpMessage = () => {
-  const success = `<h2 class="header header--success">Account created, please login</h2>`;
-  const failed = `<h2 class="header header--failed">Please try again</h2>`;
-  // if (inputsSignUpMessage.value !== '') {
-  //   boxRegistred.innerHTML = success;
-  // } else {
-  //   boxRegistred.innerHTML = failed;
-  // }
-};
 
 const loginLayout = () => {
   btnLogin.classList.add('button-active');
@@ -142,6 +133,7 @@ const loginLayout = () => {
 };
 
 const signupLayout = () => {
+  clearInputs();
   btnLogin.classList.remove('button-active');
   btnSignup.classList.add('button-active');
   boxLogin.classList.add('hidden');
@@ -151,19 +143,27 @@ const signupLayout = () => {
 btnLogin.addEventListener('click', loginLayout);
 btnSignup.addEventListener('click', signupLayout);
 
-btnConnect.addEventListener('click', function () {
+const login = () => {
   boxLogin.classList.add('hidden');
   boxMessage.classList.remove('hidden');
   setTimeout(closeModalAccount, 2500);
-});
+};
 
-btnRegister.addEventListener('click', function () {
+const register = () => {
   boxSignup.classList.add('hidden');
   boxRegistred.classList.remove('hidden');
-  if (inputSignUpUsername.value == 0 && inputSignUppassword.value == 0) {
+  if (
+    (inputSignUpUsername.value == 0 && inputSignUppassword.value == 0) ||
+    (inputSignUpUsername.value !== 0 && inputSignUppassword.value == 0) ||
+    (inputSignUpUsername.value == 0 && inputSignUppassword.value !== 0)
+  ) {
     boxRegistred.innerHTML = `<h2 class="header header--failed">Please try again</h2>`;
   } else {
     boxRegistred.innerHTML = `<h2 class="header header--success">Account created, please login</h2>`;
   }
+
   setTimeout(loginLayout, 2500);
-});
+};
+
+btnConnect.addEventListener('click', login);
+btnRegister.addEventListener('click', register);
