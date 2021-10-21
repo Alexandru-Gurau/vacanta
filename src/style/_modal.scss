@@ -92,11 +92,13 @@
     align-items: center;
 
     @media only screen and (max-width: $bp-medium) {
-      height: 35rem;
+      // height: 35rem;
+      height: 100%;
+      width: 100%;
     }
     @media only screen and (max-width: $bp-small) {
       border-radius: 0;
-      height: 55rem;
+      height: 100%;
     }
   }
   &__navigation {
