@@ -28,20 +28,20 @@
   &__small {
     font-size: 1.7rem;
   }
+}
+
+.message {
+  font-size: 3rem;
+  letter-spacing: 1.2px;
+  padding: 1rem 2rem;
 
   &--success {
     color: $color-tertiary;
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    border-radius: 3px;
-    border: 1px solid $color-tertiary;
   }
   &--failed {
-    color: red;
-    font-size: 2rem;
+    color: $color-text-dark;
+
     padding: 1rem 2rem;
-    border-radius: 3px;
-    border: 1px solid red;
   }
 }
 
