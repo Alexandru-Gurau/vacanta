@@ -322,18 +322,22 @@
         </div>
         <div class="modal-account__login" id="box-login">
           <form action="/" id="loginForm" class="">
-            <input type="text" placeholder="Your username..." class="input" />
+            <input
+              type="text"
+              placeholder="Your username..."
+              class="input"
+              id="input-login-username"
+            />
             <input
               type="password"
               placeholder="Your password..."
               class="input"
+              id="input-login-password"
             />
           </form>
           <button class="button-connect" id="buttonConnect">Connect</button>
         </div>
-        <div class="modal-account__message hidden" id="box-message">
-          <h2 class="header header--success">You have succesfuly loged in</h2>
-        </div>
+        <div class="modal-account__message hidden" id="box-message"></div>
         <div class="modal-account__login hidden" id="box-signup">
           <form action="/">
             <input

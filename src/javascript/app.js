@@ -117,6 +117,8 @@ const loginForm = document.querySelector('#loginForm');
 const boxMessage = document.getElementById('box-message');
 const boxRegistred = document.getElementById('box-registred');
 const inputs = document.querySelectorAll('.input');
+const inputLoginUsername = document.querySelector('#input-login-username');
+const inputLoginPassword = document.querySelector('#input-login-password');
 const inputSignUpUsername = document.querySelector('#input-signup-username');
 const inputSignUppassword = document.querySelector('#input-signup-password');
 
@@ -146,7 +148,21 @@ btnSignup.addEventListener('click', signupLayout);
 const login = () => {
   boxLogin.classList.add('hidden');
   boxMessage.classList.remove('hidden');
-  setTimeout(closeModalAccount, 2500);
+  if (
+    (inputLoginUsername.value == 0 && inputLoginPassword.value == 0) ||
+    (inputLoginUsername.value !== 0 && inputLoginPassword.value == 0) ||
+    (inputLoginUsername.value == 0 && inputLoginPassword.value !== 0)
+  ) {
+    boxMessage.innerHTML = `<h2 class="header header--failed">Something is wrong! Please try again.</h2>`;
+    setTimeout(() => {
+      clearInputs();
+      boxLogin.classList.remove('hidden');
+      boxMessage.classList.add('hidden');
+    }, 2500);
+  } else {
+    boxMessage.innerHTML = `<h2 class="header header--success">You have succesfuly loged in</h2>`;
+    setTimeout(closeModalAccount, 2500);
+  }
 };
 
 const register = () => {
@@ -158,11 +174,15 @@ const register = () => {
     (inputSignUpUsername.value == 0 && inputSignUppassword.value !== 0)
   ) {
     boxRegistred.innerHTML = `<h2 class="header header--failed">Please try again</h2>`;
+    setTimeout(function () {
+      clearInputs();
+      boxSignup.classList.remove('hidden');
+      boxRegistred.classList.add('hidden');
+    }, 2500);
   } else {
     boxRegistred.innerHTML = `<h2 class="header header--success">Account created, please login</h2>`;
+    setTimeout(loginLayout, 2500);
   }
-
-  setTimeout(loginLayout, 2500);
 };
 
 btnConnect.addEventListener('click', login);
