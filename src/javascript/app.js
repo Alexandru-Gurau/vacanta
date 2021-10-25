@@ -131,12 +131,18 @@ const accounts = [
   {
     name: 'Ioana Alexandra',
     username: 'ioana',
-    password: 'parola',
+    password: 'alexandra',
+    pass: true,
   },
   {
     name: 'Andrei',
     username: 'andrei',
     password: 'parola',
+  },
+  {
+    name: 'Elena',
+    username: 'elena',
+    password: 'cretu',
   },
 ];
 
@@ -163,26 +169,25 @@ const signupLayout = () => {
 btnLogin.addEventListener('click', loginLayout);
 btnSignup.addEventListener('click', signupLayout);
 
-accounts.map((el) => {
+accounts.forEach((el) => {
   const login = () => {
     boxLogin.classList.add('hidden');
     boxMessage.classList.remove('hidden');
     if (
-      (inputLoginUsername.value == 0 && inputLoginPassword.value == 0) ||
-      (inputLoginUsername.value !== 0 && inputLoginPassword.value == 0) ||
-      (inputLoginUsername.value == 0 && inputLoginPassword.value !== 0) ||
+      inputLoginUsername.value == 0 ||
+      inputLoginPassword.value == 0 ||
       inputLoginUsername.value !== el.username ||
       inputLoginPassword.value !== el.password
     ) {
-      boxMessage.innerHTML = `<h2 class="message message--failed">Failed to login, try again</h2>`;
+      boxMessage.innerHTML = `<h2 class="message message--failed">Failed to connect</h2>`;
       setTimeout(() => {
         clearInputs();
         boxLogin.classList.remove('hidden');
         boxMessage.classList.add('hidden');
-      }, 2500);
+      }, 1000);
     } else {
-      boxMessage.innerHTML = `<h2 class="message message--success">Welcome, ${el.name}</h2>`;
-      setTimeout(closeModalAccount, 2500);
+      // boxMessage.innerHTML = `<h2 class="message message--success">Welcome, ${el.name}</h2>`;
+      closeModalAccount();
       btnAccount.innerHTML = `${el.name}`;
     }
   };
