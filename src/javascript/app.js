@@ -169,49 +169,55 @@ const signupLayout = () => {
 btnLogin.addEventListener('click', loginLayout);
 btnSignup.addEventListener('click', signupLayout);
 
-accounts.forEach((el) => {
-  const login = () => {
-    boxLogin.classList.add('hidden');
-    boxMessage.classList.remove('hidden');
-    if (
-      inputLoginUsername.value == 0 ||
-      inputLoginPassword.value == 0 ||
-      inputLoginUsername.value !== el.username ||
-      inputLoginPassword.value !== el.password
-    ) {
-      boxMessage.innerHTML = `<h2 class="message message--failed">Failed to connect</h2>`;
-      setTimeout(() => {
-        clearInputs();
-        boxLogin.classList.remove('hidden');
-        boxMessage.classList.add('hidden');
-      }, 1000);
-    } else {
-      // boxMessage.innerHTML = `<h2 class="message message--success">Welcome, ${el.name}</h2>`;
+// LOGIN
+let currentAccount;
+const login = () => {
+  boxLogin.classList.add('hidden');
+  boxMessage.classList.remove('hidden');
+  currentAccount = accounts.find(
+    (acc) => acc.username === inputLoginUsername.value
+  );
+  if (currentAccount?.password === inputLoginPassword.value) {
+    boxMessage.innerHTML = `<h2 class="message message--success">Welcome, ${currentAccount.name}</h2>`;
+    btnAccount.innerHTML = `${currentAccount.name}`;
+    setTimeout(() => {
       closeModalAccount();
-      btnAccount.innerHTML = `${el.name}`;
-    }
-  };
+    }, 2500);
+  } else {
+    boxMessage.innerHTML = `<h2 class="message message--failed">Failed to connect</h2>`;
+    setTimeout(() => {
+      clearInputs();
+      boxLogin.classList.remove('hidden');
+      boxMessage.classList.add('hidden');
+    }, 2500);
+  }
+};
 
-  const register = () => {
-    boxSignup.classList.add('hidden');
-    boxRegistred.classList.remove('hidden');
-    if (
-      (inputSignUpUsername.value == 0 && inputSignUppassword.value == 0) ||
-      (inputSignUpUsername.value !== 0 && inputSignUppassword.value == 0) ||
-      (inputSignUpUsername.value == 0 && inputSignUppassword.value !== 0)
-    ) {
-      boxRegistred.innerHTML = `<h2 class="message message--failed">Complete all inputs</h2>`;
-      setTimeout(function () {
-        clearInputs();
-        boxSignup.classList.remove('hidden');
-        boxRegistred.classList.add('hidden');
-      }, 2500);
-    } else {
-      boxRegistred.innerHTML = `<h2 class="message message--success">You can log in now</h2>`;
-      setTimeout(loginLayout, 2500);
-    }
-  };
+const register = () => {
+  boxSignup.classList.add('hidden');
+  boxRegistred.classList.remove('hidden');
+  if (
+    (inputSignUpUsername.value == 0 && inputSignUppassword.value == 0) ||
+    (inputSignUpUsername.value !== 0 && inputSignUppassword.value == 0) ||
+    (inputSignUpUsername.value == 0 && inputSignUppassword.value !== 0)
+  ) {
+    boxRegistred.innerHTML = `<h2 class="message message--failed">Complete all inputs</h2>`;
+    setTimeout(function () {
+      clearInputs();
+      boxSignup.classList.remove('hidden');
+      boxRegistred.classList.add('hidden');
+    }, 2500);
+  } else {
+    boxRegistred.innerHTML = `<h2 class="message message--success">You can log in now</h2>`;
+    setTimeout(loginLayout, 2500);
+  }
+};
 
-  btnConnect.addEventListener('click', login);
-  btnRegister.addEventListener('click', register);
+btnConnect.addEventListener('click', (e) => {
+  e.preventDefault();
+  login();
+});
+btnRegister.addEventListener('click', (e) => {
+  e.preventDefault();
+  register();
 });

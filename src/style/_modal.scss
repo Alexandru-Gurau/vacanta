@@ -80,25 +80,15 @@
   align-items: center;
 
   &__container {
-    height: 55rem;
-    width: 60rem;
+    height: 100%;
+    width: 100%;
     background-color: white;
-    border-radius: 5px;
     overflow-y: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
-    @media only screen and (max-width: $bp-medium) {
-      height: 100%;
-      width: 100%;
-    }
-    @media only screen and (max-width: $bp-small) {
-      border-radius: 0;
-      height: 100%;
-    }
   }
   &__navigation {
     height: 7rem;
@@ -122,12 +112,16 @@
   &__login {
     height: 33rem;
     width: 100%;
-    padding: 3rem 10%;
+    padding: 3rem 25%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 3rem 15%;
+    }
 
     form {
       height: 100%;
@@ -154,6 +148,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media only screen and (max-width: $bp-small) {
+        height: 15rem;
+      }
     }
   }
   &__message {
