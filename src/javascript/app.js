@@ -119,6 +119,7 @@ const boxRegistred = document.getElementById('box-registred');
 const inputs = document.querySelectorAll('.input');
 const inputLoginUsername = document.querySelector('#input-login-username');
 const inputLoginPassword = document.querySelector('#input-login-password');
+const inputSignUpName = document.querySelector('#input-signup-name');
 const inputSignUpUsername = document.querySelector('#input-signup-username');
 const inputSignUppassword = document.querySelector('#input-signup-password');
 
@@ -197,9 +198,9 @@ const register = () => {
   boxSignup.classList.add('hidden');
   boxRegistred.classList.remove('hidden');
   if (
-    (inputSignUpUsername.value == 0 && inputSignUppassword.value == 0) ||
-    (inputSignUpUsername.value !== 0 && inputSignUppassword.value == 0) ||
-    (inputSignUpUsername.value == 0 && inputSignUppassword.value !== 0)
+    inputSignUpName.value == 0 ||
+    inputSignUpUsername.value == 0 ||
+    inputSignUppassword.value == 0
   ) {
     boxRegistred.innerHTML = `<h2 class="message message--failed">Complete all inputs</h2>`;
     setTimeout(function () {
@@ -207,10 +208,16 @@ const register = () => {
       boxSignup.classList.remove('hidden');
       boxRegistred.classList.add('hidden');
     }, 2500);
+    return;
   } else {
     boxRegistred.innerHTML = `<h2 class="message message--success">You can log in now</h2>`;
     setTimeout(loginLayout, 2500);
   }
+  accounts.push({
+    name: inputSignUpName.value,
+    username: inputSignUpUsername.value,
+    password: inputSignUppassword.value,
+  });
 };
 
 btnConnect.addEventListener('click', (e) => {
