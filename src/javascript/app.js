@@ -171,16 +171,21 @@ btnLogin.addEventListener('click', loginLayout);
 btnSignup.addEventListener('click', signupLayout);
 
 // LOGIN
+const toLowerCase = () => {
+  inputLoginUsername.value = inputLoginUsername.value.toLowerCase();
+  inputSignUpUsername.value = inputSignUpUsername.value.toLowerCase();
+};
 let currentAccount;
 const login = () => {
   boxLogin.classList.add('hidden');
   boxMessage.classList.remove('hidden');
+  toLowerCase();
   currentAccount = accounts.find(
     (acc) => acc.username === inputLoginUsername.value
   );
   if (currentAccount?.password === inputLoginPassword.value) {
-    boxMessage.innerHTML = `<h2 class="message message--success">Welcome, ${currentAccount.name}</h2>`;
-    btnAccount.innerHTML = `${currentAccount.name}`;
+    boxMessage.innerHTML = `<h2 class="message message--success">Welcome ${currentAccount.name}</h2>`;
+    btnAccount.innerHTML = `${currentAccount.name} 🥳`;
     setTimeout(() => {
       closeModalAccount();
     }, 2500);
@@ -197,6 +202,7 @@ const login = () => {
 const register = () => {
   boxSignup.classList.add('hidden');
   boxRegistred.classList.remove('hidden');
+  toLowerCase();
   if (
     inputSignUpName.value == 0 ||
     inputSignUpUsername.value == 0 ||
