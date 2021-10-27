@@ -40,7 +40,7 @@
 
 // NAVIGATION BUTTON
 .button-menu {
-  background-color: $color-primary;
+  // background-color: $color-primary;
   font-size: 1.5rem;
   letter-spacing: 1.5px;
   border: none;
@@ -48,17 +48,22 @@
   padding: 1rem 2rem;
   border-radius: 3px;
   background-color: transparent;
-  color: $color-text-dark;
+  // color: $color-text-dark;
   transition: all 0.2s ease-in;
 
-  @media only screen and (max-width: $bp-small) {
-    font-size: 1.3rem;
-    padding: 0.5rem 1rem;
+  // @media only screen and (max-width: $bp-small) {
+  //   font-size: 1.3rem;
+  //   padding: 0.5rem 1rem;
+  // }
+
+  img {
+    height: 2.5rem;
+    width: auto;
   }
 }
-.button-menu:hover {
-  color: rgba($color-text-dark, 0.5);
-}
+// .button-menu:hover {
+//   color: rgba($color-text-dark, 0.5);
+// }
 .button-menu:focus {
   outline: 0;
 }
