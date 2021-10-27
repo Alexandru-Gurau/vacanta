@@ -216,7 +216,7 @@ const register = () => {
     }, 2500);
     return;
   } else {
-    boxRegistred.innerHTML = `<h2 class="message message--success">You can log in now</h2>`;
+    boxRegistred.innerHTML = `<h2 class="message message--success">${inputSignUpName.value}, you can log in now</h2>`;
     setTimeout(loginLayout, 2500);
   }
   accounts.push({
