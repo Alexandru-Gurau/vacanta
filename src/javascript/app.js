@@ -130,7 +130,7 @@ const accounts = [
     password: 'parola',
   },
   {
-    name: 'Ioana Alexandra',
+    name: 'Ioana',
     username: 'ioana',
     password: 'alexandra',
     pass: true,
@@ -185,7 +185,7 @@ const login = () => {
   );
   if (currentAccount?.password === inputLoginPassword.value) {
     boxMessage.innerHTML = `<h2 class="message message--success">Welcome ${currentAccount.name}</h2>`;
-    btnAccount.innerHTML = `${currentAccount.name} 🥳`;
+    btnAccount.innerHTML = `${currentAccount.name}`;
     setTimeout(() => {
       closeModalAccount();
     }, 2500);
