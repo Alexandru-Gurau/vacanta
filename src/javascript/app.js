@@ -1,4 +1,21 @@
 'use strict';
+// IMPORTS
+// Import accounts from logreg.js
+import {
+  btnAccount,
+  openModalAccount,
+  closeModalAccount,
+  login,
+  register,
+  btnCloseModalAccount,
+  loginLayout,
+  signupLayout,
+  btnLogin,
+  btnSignup,
+  btnRegister,
+  btnConnect,
+} from './logreg.js';
+
 // MODAL ABOUT
 const modalAbout = document.querySelector('#modalAbout');
 const btnAbout = document.getElementById('btn-more-about');
@@ -80,24 +97,8 @@ btnRight.addEventListener('click', function (e) {
 // //////////////////////////////////////////////////////
 
 // ACCOUNT MODAL
-// BUTTON ACCOUNT
-const btnAccount = document.getElementById('btn-account');
-const modalAccount = document.querySelector('#modal-account');
-const btnCloseModalAccount = document.getElementById('btn-closeModalAccount');
-
-const openModalAccount = () => {
-  modalAccount.classList.remove('hidden');
-  boxMessage.classList.add('hidden');
-  boxLogin.classList.remove('hidden');
-  clearInputs();
-};
-const closeModalAccount = () => {
-  modalAccount.classList.add('hidden');
-};
-
 btnAccount.addEventListener('click', openModalAccount);
 btnCloseModalAccount.addEventListener('click', closeModalAccount);
-
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     closeModalAbout();
@@ -106,126 +107,9 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// CONNECT TO YOUR ACCOUNT
-const btnLogin = document.getElementById('button-login');
-const btnSignup = document.getElementById('button-signup');
-const boxLogin = document.querySelector('#box-login');
-const boxSignup = document.querySelector('#box-signup');
-const btnConnect = document.getElementById('buttonConnect');
-const btnRegister = document.getElementById('buttonRegister');
-const loginForm = document.querySelector('#loginForm');
-const boxMessage = document.getElementById('box-message');
-const boxRegistred = document.getElementById('box-registred');
-const inputs = document.querySelectorAll('.input');
-const inputLoginUsername = document.querySelector('#input-login-username');
-const inputLoginPassword = document.querySelector('#input-login-password');
-const inputSignUpName = document.querySelector('#input-signup-name');
-const inputSignUpUsername = document.querySelector('#input-signup-username');
-const inputSignUppassword = document.querySelector('#input-signup-password');
-
-const accounts = [
-  {
-    name: 'Alexandru',
-    username: 'alex',
-    password: 'parola',
-  },
-  {
-    name: 'Ioana',
-    username: 'ioana',
-    password: 'alexandra',
-    pass: true,
-  },
-  {
-    name: 'Andrei',
-    username: 'andrei',
-    password: 'parola',
-  },
-  {
-    name: 'Elena',
-    username: 'elena',
-    password: 'cretu',
-  },
-];
-
-const clearInputs = () => {
-  inputs.forEach((input) => (input.value = ''));
-};
-
-const loginLayout = () => {
-  btnLogin.classList.add('button-active');
-  btnSignup.classList.remove('button-active');
-  boxLogin.classList.remove('hidden');
-  boxSignup.classList.add('hidden');
-  boxRegistred.classList.add('hidden');
-};
-
-const signupLayout = () => {
-  clearInputs();
-  btnLogin.classList.remove('button-active');
-  btnSignup.classList.add('button-active');
-  boxLogin.classList.add('hidden');
-  boxSignup.classList.remove('hidden');
-};
-
+// CONNECT OR REGISTER TO YOUR ACCOUNT
 btnLogin.addEventListener('click', loginLayout);
 btnSignup.addEventListener('click', signupLayout);
-
-// LOGIN
-const toLowerCase = () => {
-  inputLoginUsername.value = inputLoginUsername.value.toLowerCase();
-  inputSignUpUsername.value = inputSignUpUsername.value.toLowerCase();
-};
-let currentAccount;
-const login = () => {
-  boxLogin.classList.add('hidden');
-  boxMessage.classList.remove('hidden');
-  toLowerCase();
-  currentAccount = accounts.find(
-    (acc) => acc.username === inputLoginUsername.value
-  );
-  if (currentAccount?.password === inputLoginPassword.value) {
-    boxMessage.innerHTML = `<h2 class="message message--success">Welcome ${currentAccount.name}</h2>`;
-    btnAccount.innerHTML = `${currentAccount.name}`;
-    setTimeout(() => {
-      closeModalAccount();
-    }, 2500);
-  } else {
-    boxMessage.innerHTML = `<h2 class="message message--failed">Failed to connect</h2>`;
-    setTimeout(() => {
-      clearInputs();
-      boxLogin.classList.remove('hidden');
-      boxMessage.classList.add('hidden');
-    }, 2500);
-  }
-};
-
-const register = () => {
-  boxSignup.classList.add('hidden');
-  boxRegistred.classList.remove('hidden');
-  toLowerCase();
-  if (
-    inputSignUpName.value == 0 ||
-    inputSignUpUsername.value == 0 ||
-    inputSignUppassword.value == 0
-  ) {
-    boxRegistred.innerHTML = `<h2 class="message message--failed">Complete all inputs</h2>`;
-    setTimeout(function () {
-      clearInputs();
-      boxSignup.classList.remove('hidden');
-      boxRegistred.classList.add('hidden');
-    }, 2500);
-    return;
-  } else {
-    boxRegistred.innerHTML = `<h2 class="message message--success">${inputSignUpName.value}, you can log in now</h2>`;
-    setTimeout(loginLayout, 2500);
-  }
-  accounts.push({
-    name: inputSignUpName.value,
-    username: inputSignUpUsername.value,
-    password: inputSignUppassword.value,
-  });
-};
-
 btnConnect.addEventListener('click', (e) => {
   e.preventDefault();
   login();
