@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/style/main.scss" />
-    <!-- <script src="./src/javascript/app.js" defer></script> -->
+    <script src="../src/javascript/PageBooking.js" defer type="module"></script>
     <title>Booking</title>
   </head>
   <body>
@@ -49,6 +49,69 @@
           >al.webdesign</a
         >
       </h4>
+    </div>
+
+    <!-- LOGIN or REGISTER -->
+    <div class="modal-account hidden" id="modal-account">
+      <div class="modal-account__container">
+        <div class="modal-account__navigation">
+          <img
+            src="../icons/btn-x.svg"
+            alt=""
+            class="button-x"
+            id="btn-closeModalAccount"
+          />
+        </div>
+        <!-- <h3 class="header header__normal">Connect to your account</h3> -->
+        <div class="modal-account__buttons">
+          <button class="button-account button-active" id="button-login">
+            Log In
+          </button>
+          <button class="button-account" id="button-signup">Sign Up</button>
+        </div>
+        <div class="modal-account__login" id="box-login">
+          <form action="/" id="loginForm" class="">
+            <input
+              type="text"
+              placeholder="Your username..."
+              class="input"
+              id="input-login-username"
+            />
+            <input
+              type="password"
+              placeholder="Your password..."
+              class="input"
+              id="input-login-password"
+            />
+          </form>
+          <button class="button-connect" id="buttonConnect">Connect</button>
+        </div>
+        <div class="modal-account__message hidden" id="box-message"></div>
+        <div class="modal-account__login hidden" id="box-signup">
+          <form action="/">
+            <input
+              type="text"
+              placeholder="Name"
+              class="input"
+              id="input-signup-name"
+            />
+            <input
+              type="text"
+              placeholder="Username"
+              class="input"
+              id="input-signup-username"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="input"
+              id="input-signup-password"
+            />
+          </form>
+          <button class="button-connect" id="buttonRegister">Register</button>
+        </div>
+        <div class="modal-account__registred hidden" id="box-registred"></div>
+      </div>
     </div>
   </body>
 </html>

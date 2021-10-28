@@ -2,16 +2,17 @@
 import { accounts } from './account';
 
 // ACCOUNT MODAL
-export const btnAccount = document.getElementById('btn-account');
+
 export const btnLogin = document.getElementById('button-login');
 export const btnSignup = document.getElementById('button-signup');
 export const btnRegister = document.getElementById('buttonRegister');
-export const btnConnect = document.getElementById('buttonConnect');
+const btnConnect = document.getElementById('buttonConnect');
 export const btnCloseModalAccount = document.getElementById(
   'btn-closeModalAccount'
 );
 
 // ONLY HERE
+const btnAccount = document.getElementById('btn-account');
 const inputLoginUsername = document.querySelector('#input-login-username');
 const inputLoginPassword = document.querySelector('#input-login-password');
 const inputSignUpName = document.querySelector('#input-signup-name');
@@ -35,17 +36,17 @@ const clearInputs = () => {
 };
 
 // Modal [open / close]
-export const openModalAccount = () => {
+const openModalAccount = () => {
   modalAccount.classList.remove('hidden');
   boxMessage.classList.add('hidden');
   boxLogin.classList.remove('hidden');
   clearInputs();
 };
-export const closeModalAccount = () => {
+const closeModalAccount = () => {
   modalAccount.classList.add('hidden');
 };
 
-export const loginLayout = () => {
+const loginLayout = () => {
   btnLogin.classList.add('button-active');
   btnSignup.classList.remove('button-active');
   boxLogin.classList.remove('hidden');
@@ -53,7 +54,7 @@ export const loginLayout = () => {
   boxRegistred.classList.add('hidden');
 };
 
-export const signupLayout = () => {
+const signupLayout = () => {
   clearInputs();
   btnLogin.classList.remove('button-active');
   btnSignup.classList.add('button-active');
@@ -62,7 +63,7 @@ export const signupLayout = () => {
 };
 
 let currentAccount;
-export const login = () => {
+const login = () => {
   boxLogin.classList.add('hidden');
   boxMessage.classList.remove('hidden');
   toLowerCase();
@@ -85,7 +86,7 @@ export const login = () => {
   }
 };
 
-export const register = () => {
+const register = () => {
   boxSignup.classList.add('hidden');
   boxRegistred.classList.remove('hidden');
   toLowerCase();
@@ -111,3 +112,23 @@ export const register = () => {
     password: inputSignUppassword.value,
   });
 };
+
+// ACCOUNT MODAL
+btnAccount.addEventListener('click', openModalAccount);
+btnCloseModalAccount.addEventListener('click', closeModalAccount);
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeModalAccount();
+  }
+});
+// CONNECT OR REGISTER TO YOUR ACCOUNT
+btnLogin.addEventListener('click', loginLayout);
+btnSignup.addEventListener('click', signupLayout);
+btnConnect.addEventListener('click', (e) => {
+  e.preventDefault();
+  login();
+});
+btnRegister.addEventListener('click', (e) => {
+  e.preventDefault();
+  register();
+});
