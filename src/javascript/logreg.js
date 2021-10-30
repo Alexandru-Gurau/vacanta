@@ -2,7 +2,6 @@
 import { accounts } from './account';
 
 // ACCOUNT MODAL
-
 export const btnLogin = document.getElementById('button-login');
 export const btnSignup = document.getElementById('button-signup');
 export const btnRegister = document.getElementById('buttonRegister');

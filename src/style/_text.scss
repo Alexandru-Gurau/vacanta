@@ -28,6 +28,14 @@
   &__small {
     font-size: 1.7rem;
   }
+
+  &__card {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  &__desc {
+    color: rgba($color-text-dark, 0.6);
+  }
 }
 
 .message {
