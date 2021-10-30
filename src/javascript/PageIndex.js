@@ -17,7 +17,12 @@ import { btnAbout, btnAboutClose, btnExample, btnExampleClose } from './modals';
 
 const dropdownMenu = document.getElementById('navigation-dropdown');
 const buttonShoppingCard = document.getElementById('buttonShopping');
+const buttonCheckOut = document.getElementById('buttonCheckOut');
 
 buttonShoppingCard.addEventListener('click', function () {
   dropdownMenu.classList.toggle('hide-dropdown');
+});
+buttonCheckOut.addEventListener('click', function (e) {
+  e.preventDefault();
+  dropdownMenu.classList.add('hide-dropdown');
 });
