@@ -141,3 +141,29 @@
   box-shadow: $button-shadow;
   color: $color-text-dark;
 }
+
+// BUTTON CHECK OUT
+.button-checkout {
+  text-transform: uppercase;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: $button-shadow;
+  background-color: $color-tertiary;
+  color: white;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.button-checkout:hover {
+  box-shadow: $button-shadow-hover;
+  transform: translateY(-5px);
+}
+.button-checkout:active {
+  transform: translateY(3px);
+  box-shadow: $button-shadow;
+}
+.button-checkout:focus {
+  outline: 0;
+}
