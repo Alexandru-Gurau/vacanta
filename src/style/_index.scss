@@ -67,8 +67,8 @@
     }
     @media only screen and (max-width: $bp-small) {
       width: 100%;
-      height: 60rem;
-      bottom: -60rem;
+      height: 50rem;
+      bottom: -50rem;
       padding: 0;
     }
   }
@@ -86,6 +86,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 30rem;
+    }
   }
   &__box {
     height: 10rem;
