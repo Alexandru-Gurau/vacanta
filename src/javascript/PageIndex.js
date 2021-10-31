@@ -45,22 +45,32 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+let img = document.createElement('img');
 // cards
 const card = [
   {
-    img: 'dest--1.jpg',
+    img: (img.src = new URL(
+      '../../images/destinations/dest--1.jpg',
+      import.meta.url
+    )),
     title: 'Bahamas',
     desc: 'The best food',
     price: 299,
   },
   {
-    img: '/dest--2.f992b28e.jpg',
+    img: (img.src = new URL(
+      '../../images/destinations/dest--2.jpg',
+      import.meta.url
+    )),
     title: 'Bali',
     desc: 'Good prices',
     price: 199,
   },
   {
-    img: '/dest--3.3d10ea30.jpg',
+    img: (img.src = new URL(
+      '../../images/destinations/dest--3.jpg',
+      import.meta.url
+    )),
     title: 'Maldives',
     desc: 'Best overall',
     price: 399,
@@ -69,11 +79,12 @@ const card = [
 
 const renderCards = () => {
   const shoppingContainer = document.querySelector('.navigation__container');
+
   card.map((el) => {
     let html = `
           <div class="navigation__box">
             <img
-              src="../images/destinations/${el.img}"
+              src="${el.img}"
               alt="${el.title}"
               class="navigation__box__img"
             />
