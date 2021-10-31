@@ -48,7 +48,7 @@ document.addEventListener('keydown', function (e) {
 // cards
 const card = [
   {
-    img: '../images/destinations/dest--1.jpg',
+    img: './images/destinations/dest--1.jpg',
     title: 'Bahamas',
     desc: 'The best food',
     price: 299,
