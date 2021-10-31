@@ -48,7 +48,7 @@ document.addEventListener('keydown', function (e) {
 // cards
 const card = [
   {
-    img: './images/destinations/dest--1.jpg',
+    img: 'dest--1.jpg',
     title: 'Bahamas',
     desc: 'The best food',
     price: 299,
@@ -73,7 +73,7 @@ const renderCards = () => {
     let html = `
           <div class="navigation__box">
             <img
-              src="${el.img}"
+              src="../images/destinations/${el.img}"
               alt="${el.title}"
               class="navigation__box__img"
             />
