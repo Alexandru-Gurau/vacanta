@@ -12,7 +12,7 @@ const renderTrips = () => {
     <div class="booking-container__box">
       <h1 class="header header__normal">${el.title}</h1>
       <h1 class="header header__desc">${el.desc}</h1>
-      <h1 class="header header__normal">${el.price}</h1>
+      <h1 class="header header__normal">${el.price} €</h1>
       <button class="button-addToCard">Add to cart</button>
     </div>
   </div>`;

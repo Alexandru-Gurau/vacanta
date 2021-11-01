@@ -7,15 +7,17 @@ export const buttonShoppingX = document.getElementById('closeShoppingBox');
 
 const shoppingContainer = document.querySelector('.navigation__container');
 const shoppingMessage = document.getElementById('navMessage');
+const headerMesage = document.querySelector('#header-message');
 
 const openShoppingBox = () => {
   dropdownMenu.classList.toggle('hide-dropdown');
+  headerMesage.innerHTML = 'Add some trips 😞';
 };
 const closeShoppingBox = () => {
   dropdownMenu.classList.add('hide-dropdown');
 };
 buttonShoppingCard.addEventListener('click', openShoppingBox);
-buttonCheckOut.addEventListener('click', closeShoppingBox);
+
 buttonShoppingX.addEventListener('click', closeShoppingBox);
 
 document.addEventListener('keydown', function (e) {
@@ -62,6 +64,7 @@ const totalPrice = () => {
 };
 
 // After rendering
+
 const updateUI = () => {
   const shoppingCard = document.querySelectorAll('.navigation__box');
   const shoppingPrice = document.querySelectorAll('.navigation__box__price');
@@ -94,6 +97,12 @@ const updateUI = () => {
     buttonCheckOut.style.display = 'block';
   }
   buttonCheckOut.innerHTML = `You have to pay ${totalPrice()} €`;
+  buttonCheckOut.addEventListener('click', () => {
+    card.length = 0;
+    init();
+    headerMesage.innerHTML = 'Thank you for shopping 🥳';
+    setTimeout(closeShoppingBox, 3000);
+  });
 };
 
 export const init = () => {
