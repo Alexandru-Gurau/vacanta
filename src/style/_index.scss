@@ -52,7 +52,7 @@
     background-color: $color-secondary;
     z-index: 10;
     padding: 1rem;
-    box-shadow: 2px 2px 10px rgba(black, 0.2);
+    box-shadow: $box-shandow;
 
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@
     width: 80%;
     margin: 0.5rem 0;
     border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(black, 0.2);
+    box-shadow: $box-shandow;
     cursor: pointer;
     transition: all 0.5s ease-in;
 

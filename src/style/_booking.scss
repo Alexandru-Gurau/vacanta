@@ -20,3 +20,85 @@
     text-shadow: 2px 2px 5px black;
   }
 }
+.booking-container {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+
+  height: auto;
+  padding: 5rem 10%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem 2rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    padding: 2rem;
+  }
+
+  &__card {
+    height: 30rem;
+    width: 80%;
+    margin: 2rem;
+    cursor: pointer;
+    background-color: $color-secondary;
+    box-shadow: $box-shandow;
+    border-bottom-right-radius: 70px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 70%;
+      height: 22rem;
+      overflow: hidden;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      width: 90%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      height: 50rem;
+      width: 95%;
+      flex-direction: column;
+    }
+  }
+  &__picture {
+    height: 30rem;
+    width: 30rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 100%;
+      width: auto;
+
+      @media only screen and (max-width: $bp-large) {
+        height: 80%;
+      }
+    }
+  }
+  &__box {
+    height: 30rem;
+    width: 100%;
+    padding: 5rem 2rem 1rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 5rem 0;
+    }
+    @media only screen and (max-width: $bp-small) {
+      height: 15rem;
+      padding: 0;
+    }
+  }
+}
