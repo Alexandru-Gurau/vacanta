@@ -15,14 +15,41 @@
       </a>
     </section>
     <navigation class="navigation">
-      <!-- <a href="#" class="button-link">offerts</a> -->
-      <button class="button-menu" id="no-id-yet">
+      <button class="button-menu" id="buttonShopping">
         <img src="../icons/shopping-cart-solid.svg" alt="schopping cart" />
       </button>
       <button class="button-menu" id="btn-account">
         <img src="../icons/user-circle-solid.svg" alt="login" />
       </button>
+      <div class="navigation__dropdown hide-dropdown" id="navigation-dropdown">
+        <div class="navigation__x">
+          <img
+            src="../icons/btn-x.svg"
+            alt=""
+            class="button-x"
+            id="closeShoppingBox"
+          />
+        </div>
+        <div class="navigation__header">
+          <h2 class="header header__normal">Checkout list</h2>
+        </div>
+        <div class="navigation__message" id="navMessage">
+          <h1 class="header header__normal center">
+            Shopping list is empty 😞
+          </h1>
+        </div>
+        <div class="navigation__container" id="navContainer"></div>
+        <div class="navigation__checkout">
+          <button class="button-checkout" id="buttonCheckOut">TOTAL</button>
+        </div>
+      </div>
     </navigation>
+    <section class="booking-welcome">
+      <h1 class="header header__big center">Welcome</h1>
+      <h1 class="header header__normal center">
+        Here you can find the best places to go
+      </h1>
+    </section>
 
     <footer class="footer">
       <div class="footer__box footer__box-1">

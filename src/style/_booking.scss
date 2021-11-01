@@ -1,0 +1,22 @@
+.booking-welcome {
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+
+  height: 25rem;
+  padding: 5% 0;
+
+  background-image: url(../../images/wallpaper--1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  h1 {
+    color: $color-secondary;
+    text-shadow: 2px 2px 5px black;
+  }
+}
