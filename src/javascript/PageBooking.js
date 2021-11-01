@@ -5,3 +5,4 @@ import {
   buttonCheckOut,
   buttonShoppingX,
 } from './Shopping/shopping';
+import { bookingContainer } from './Trips/tripsLayout';
