@@ -25,7 +25,7 @@ const shoppingContainer = document.querySelector('.navigation__container');
 const shoppingMessage = document.getElementById('navMessage');
 
 const openShoppingBox = () => {
-  dropdownMenu.classList.remove('hide-dropdown');
+  dropdownMenu.classList.toggle('hide-dropdown');
 };
 const closeShoppingBox = () => {
   dropdownMenu.classList.add('hide-dropdown');
@@ -107,9 +107,17 @@ const renderCards = () => {
     shoppingContainer.insertAdjacentHTML('beforeend', html);
   });
 };
+const totalPrice = () => {
+  let i;
+  let total = 0;
+  for (i = 0; i < card.length; i++) {
+    total += card[i].price;
+  }
+  return total;
+};
 
 // After rendering
-const test = () => {
+const updateUI = () => {
   const shoppingCard = document.querySelectorAll('.navigation__box');
   const shoppingPrice = document.querySelectorAll('.navigation__box__price');
   const shoppingBoxClose = document.querySelectorAll('.navigation__box__close');
@@ -134,15 +142,19 @@ const test = () => {
   if (card.length === 0) {
     shoppingContainer.style.display = 'none';
     shoppingMessage.style.display = 'flex';
+    buttonCheckOut.style.display = 'none';
   } else {
     shoppingContainer.style.display = 'flex';
     shoppingMessage.style.display = 'none';
+    buttonCheckOut.style.display = 'block';
   }
+  buttonCheckOut.innerHTML = `You have to pay ${totalPrice()} €`;
 };
 
 const init = () => {
   clear();
   renderCards();
-  test();
+  totalPrice();
+  updateUI();
 };
 init();
