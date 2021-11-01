@@ -1,4 +1,4 @@
-import { card } from './cards';
+import { card } from '../Trips/tripsLayout';
 
 export const dropdownMenu = document.getElementById('navigation-dropdown');
 export const buttonShoppingCard = document.getElementById('buttonShopping');
@@ -28,7 +28,7 @@ const clear = () => {
   shoppingContainer.innerHTML = '';
 };
 
-const renderCards = () => {
+export const renderCards = () => {
   card.map((el) => {
     let html = `
           <div class="navigation__box">
@@ -96,7 +96,7 @@ const updateUI = () => {
   buttonCheckOut.innerHTML = `You have to pay ${totalPrice()} €`;
 };
 
-const init = () => {
+export const init = () => {
   clear();
   renderCards();
   totalPrice();
