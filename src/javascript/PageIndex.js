@@ -21,6 +21,9 @@ const buttonShoppingCard = document.getElementById('buttonShopping');
 const buttonCheckOut = document.getElementById('buttonCheckOut');
 const buttonShoppingX = document.getElementById('closeShoppingBox');
 
+const shoppingContainer = document.querySelector('.navigation__container');
+const shoppingMessage = document.getElementById('navMessage');
+
 const openShoppingBox = () => {
   dropdownMenu.classList.remove('hide-dropdown');
 };
@@ -76,10 +79,11 @@ const card = [
     price: 399,
   },
 ];
+const clear = () => {
+  shoppingContainer.innerHTML = '';
+};
 
 const renderCards = () => {
-  const shoppingContainer = document.querySelector('.navigation__container');
-
   card.map((el) => {
     let html = `
           <div class="navigation__box">
@@ -103,20 +107,42 @@ const renderCards = () => {
     shoppingContainer.insertAdjacentHTML('beforeend', html);
   });
 };
-renderCards();
 
 // After rendering
-const shoppingCard = document.querySelectorAll('.navigation__box');
-const shoppingPrice = document.querySelectorAll('.navigation__box__price');
-const shoppingBoxClose = document.querySelectorAll('.navigation__box__close');
-shoppingCard.forEach((el, i) => {
-  el.addEventListener('mouseover', function () {
-    shoppingPrice[i].style.display = 'none';
-    shoppingBoxClose[i].style.display = 'flex';
+const test = () => {
+  const shoppingCard = document.querySelectorAll('.navigation__box');
+  const shoppingPrice = document.querySelectorAll('.navigation__box__price');
+  const shoppingBoxClose = document.querySelectorAll('.navigation__box__close');
+
+  shoppingCard.forEach((el, i) => {
+    el.addEventListener('mouseover', function () {
+      shoppingPrice[i].style.display = 'none';
+      shoppingBoxClose[i].style.display = 'flex';
+    });
+    el.addEventListener('mouseout', function () {
+      shoppingPrice[i].style.display = 'flex';
+      shoppingBoxClose[i].style.display = 'none';
+    });
   });
-  el.addEventListener('mouseout', function () {
-    shoppingPrice[i].style.display = 'flex';
-    shoppingBoxClose[i].style.display = 'none';
+  shoppingBoxClose.forEach((el, i) => {
+    el.addEventListener('click', () => {
+      card.splice(i, 1);
+      init();
+    });
   });
-});
-// //////////////////////
+
+  if (card.length === 0) {
+    shoppingContainer.style.display = 'none';
+    shoppingMessage.style.display = 'flex';
+  } else {
+    shoppingContainer.style.display = 'flex';
+    shoppingMessage.style.display = 'none';
+  }
+};
+
+const init = () => {
+  clear();
+  renderCards();
+  test();
+};
+init();
