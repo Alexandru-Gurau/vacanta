@@ -34,7 +34,7 @@
   transform: translateY(3px);
   box-shadow: $button-shadow;
 }
-.button-cta:focus {
+.button-cta:focus-visible {
   outline: 0;
 }
 
