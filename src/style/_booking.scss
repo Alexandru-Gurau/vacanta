@@ -162,16 +162,19 @@
 
   &__box {
     height: 40rem;
-    width: 100%;
+    width: 90%;
     background-color: $color-secondary;
     margin-bottom: 5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: $box-shandow;
 
     display: flex;
 
     @media only screen and (max-width: $bp-small) {
       height: 20rem;
+      width: 98%;
       margin-bottom: 1.5rem;
-      box-shadow: $box-shandow;
     }
   }
   &__picture {
