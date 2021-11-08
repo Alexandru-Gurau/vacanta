@@ -64,7 +64,6 @@ const totalPrice = () => {
 };
 
 // After rendering
-
 const updateUI = () => {
   const shoppingCard = document.querySelectorAll('.navigation__box');
   const shoppingPrice = document.querySelectorAll('.navigation__box__price');
