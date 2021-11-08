@@ -6,7 +6,7 @@ import {
   buttonShoppingX,
 } from './Shopping/shopping';
 import { bookingContainer } from './Trips/tripsLayout';
-import { buttonLeftBooking, buttonRightBooking } from './Shopping/reviews';
+import { buttonLeftBooking, buttonRightBooking } from './reviewsBooking';
 
 // BUTTON SEE MORE or LESS
 const btnSeeMore = document.getElementById('button-see-more');

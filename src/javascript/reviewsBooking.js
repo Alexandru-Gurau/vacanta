@@ -2,8 +2,8 @@ export const buttonLeftBooking = document.querySelector('#booking-btn-left');
 export const buttonRightBooking = document.querySelector('#booking-btn-right');
 const slides = document.getElementsByClassName('booking-reviews__box');
 
-let slideIndex = 0;
-showSlides((slideIndex = 1));
+let slideIndex = 1;
+showSlides(slideIndex);
 
 const nextSlide = function plusSlide(n) {
   showSlides((slideIndex += n));

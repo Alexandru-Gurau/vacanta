@@ -12,7 +12,7 @@ import {
   btnRegister,
   btnConnect,
 } from './logreg.js';
-import { btnLeft, btnRight } from './reviews';
+import { btnLeft, btnRight } from './reviewsIndex';
 import { btnAbout, btnAboutClose, btnExample, btnExampleClose } from './modals';
 import {
   dropdownMenu,
