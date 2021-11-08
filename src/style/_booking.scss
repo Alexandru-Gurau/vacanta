@@ -124,12 +124,12 @@
   grid-row: 6 / 7;
 
   width: 100%;
-  height: 30rem;
+  height: 20rem;
   padding: 0 5%;
   background-color: $color-tertiary;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   @media only screen and (max-width: $bp-small) {
@@ -138,12 +138,7 @@
   }
 
   h1 {
-    width: 40%;
     color: white;
-
-    @media only screen and (max-width: $bp-small) {
-      width: 100%;
-    }
   }
 }
 
@@ -152,43 +147,96 @@
   grid-row: 7 / 8;
 
   width: 100%;
-  height: auto;
+  height: 50rem;
   background-color: $color-tertiary;
 
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
 
-  &__box {
+  @media only screen and (max-width: $bp-large) {
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 5rem;
+  }
+}
+.card {
+  height: 35rem;
+  width: 20%;
+  cursor: pointer;
+
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+
+  @media only screen and (max-width: $bp-large) {
     height: 40rem;
+  }
+  @media only screen and (max-width: $bp-medium) {
     width: 90%;
-    background-color: $color-secondary;
-    margin-bottom: 5rem;
-    border-radius: 5px;
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
+
+  &__side {
+    height: 35rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    -webkit-backface-visibility: hidden; //for safari
+    backface-visibility: hidden;
+    border-radius: 3px;
     overflow: hidden;
     box-shadow: $box-shandow;
 
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-large) {
+      width: 20rem;
+      height: 40rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
       height: 20rem;
-      width: 98%;
-      margin-bottom: 1.5rem;
+    }
+
+    &--front {
+      background-color: $color-secondary;
+
+      @media only screen and (max-width: $bp-medium) {
+        flex-direction: row;
+      }
+    }
+    &--back {
+      transform: rotateY(-180deg);
+      background-color: $color-primary;
+      padding: 1rem;
     }
   }
-  &__picture {
-    height: 100%;
-    width: 65%;
-    clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
 
-    background-size: cover;
+  &__picture {
+    height: 20rem;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
     background-position: center;
     background-repeat: no-repeat;
-
-    @media only screen and (max-width: $bp-small) {
-      width: 55%;
-    }
+    background-size: cover;
 
     &--1 {
       background-image: url(../../images/whyus--1.jpg);
@@ -202,17 +250,22 @@
     &--4 {
       background-image: url(../../images/whyus--4.jpg);
     }
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 40%;
+      clip-path: polygon(0 0, 100% 0, 85% 99%, 0% 100%);
+    }
   }
   &__text {
-    height: 100%;
-    width: 35%;
+    height: 15rem;
+    width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    @media only screen and (max-width: $bp-small) {
-      width: 40%;
+    @media only screen and (max-width: $bp-medium) {
+      width: 50%;
     }
   }
 }
