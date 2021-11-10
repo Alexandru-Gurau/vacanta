@@ -11,7 +11,7 @@ const headerMesage = document.querySelector('#header-message');
 
 const openShoppingBox = () => {
   dropdownMenu.classList.toggle('hide-dropdown');
-  headerMesage.innerHTML = 'Add some trips 😞';
+  headerMesage.innerHTML = 'Add some trips 🌎';
 };
 const closeShoppingBox = () => {
   dropdownMenu.classList.add('hide-dropdown');
