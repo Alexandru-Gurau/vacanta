@@ -80,7 +80,7 @@
   }
   &__picture {
     height: 100%;
-    width: 40%;
+    width: 45%;
 
     background-position: center;
     background-size: cover;
@@ -111,7 +111,7 @@
     align-items: center;
 
     @media only screen and (max-width: $bp-medium) {
-      width: 60%;
+      width: 55%;
       padding: 1rem 0 0 0;
     }
     @media only screen and (max-width: $bp-small) {
@@ -148,7 +148,7 @@
     &__box {
       height: 12.5rem;
       width: 30rem;
-      padding: 2rem;
+      padding: 5rem;
 
       display: flex;
       flex-direction: column;
@@ -157,6 +157,9 @@
 
       @media only screen and (max-width: $bp-medium) {
         width: 20rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        padding: 1rem;
       }
     }
   }
