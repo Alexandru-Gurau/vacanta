@@ -70,6 +70,8 @@
   height: 40rem;
   width: 100%;
 
+  margin-top: 5rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,7 +153,6 @@
     &__box {
       height: 12.5rem;
       width: 30rem;
-      // padding: 5rem;
 
       display: flex;
       flex-direction: column;
