@@ -80,7 +80,7 @@
   }
   &__picture {
     height: 100%;
-    width: 45%;
+    width: 40%;
 
     background-position: center;
     background-size: cover;
@@ -102,7 +102,7 @@
 
   &__text {
     height: 100%;
-    width: 50%;
+    width: 60%;
     padding: 5rem 0 0 0;
 
     display: flex;
@@ -148,7 +148,7 @@
     &__box {
       height: 12.5rem;
       width: 30rem;
-      padding: 5rem;
+      // padding: 5rem;
 
       display: flex;
       flex-direction: column;
