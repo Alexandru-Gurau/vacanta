@@ -198,6 +198,7 @@
     background-color: $color-secondary;
     border-radius: 3px;
     box-shadow: $box-shandow;
+    cursor: pointer;
 
     background-position: center;
     background-size: cover;
@@ -269,13 +270,27 @@
       }
     }
   }
-  &__title {
+
+  &__text {
     height: 100%;
-    width: 60%;
+    width: 40%;
     background-color: rgba($color-secondary, 0.95);
+    transition: all 0.2s ease-in;
 
     display: flex;
     justify-content: center;
     align-items: center;
   }
+}
+.paragraphJS {
+  height: 100%;
+  width: 100%;
+  padding: 2rem 5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-hidden {
+  display: none;
 }
