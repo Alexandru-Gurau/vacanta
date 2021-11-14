@@ -7,9 +7,9 @@ const expandCardText = () => {
   console.log(paragraph);
 
   aboutCard.forEach((el, i) => {
-    aboutStory.addEventListener('click', () => {
-      paragraph[i].style.display = 'none';
-    });
+    // aboutStory.addEventListener('click', () => {
+    //   paragraph[i].style.display = 'none';
+    // });
     el.addEventListener('mouseover', function () {
       aboutCardText[i].style.width = '100%';
       header[i].style.display = 'none';
