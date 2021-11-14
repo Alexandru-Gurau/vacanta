@@ -203,6 +203,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    display: flex;
+    align-items: center;
+
     @media only screen and (max-width: $bp-small) {
       height: 25rem;
       width: 32rem;
@@ -213,6 +216,8 @@
 
       margin-top: 10rem;
       margin-left: 15%;
+
+      justify-content: flex-start;
 
       @media only screen and (max-width: $bp-medium) {
         margin-left: 5%;
@@ -263,5 +268,14 @@
         margin-left: 6%;
       }
     }
+  }
+  &__title {
+    height: 100%;
+    width: 60%;
+    background-color: rgba($color-secondary, 0.95);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
