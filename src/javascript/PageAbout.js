@@ -8,14 +8,14 @@ const expandCardText = () => {
     el.addEventListener('mouseover', function () {
       aboutCardText[i].style.width = '100%';
       header[i].style.display = 'none';
-      setTimeout(function () {
-        paragraph[i].classList.remove('p-hidden');
+      setTimeout(() => {
+        paragraph[i].style.display = 'flex';
       }, 300);
     });
     el.addEventListener('mouseout', function () {
-      aboutCardText[i].style.width = '40%';
+      aboutCardText[i].style.width = '50%';
       header[i].style.display = 'block';
-      paragraph[i].classList.add('p-hidden');
+      paragraph[i].style.display = 'none';
     });
   });
 };

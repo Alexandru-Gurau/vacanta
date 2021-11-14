@@ -182,7 +182,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 
   h1 {
     align-self: center;
@@ -199,6 +199,7 @@
     border-radius: 3px;
     box-shadow: $box-shandow;
     cursor: pointer;
+    margin: 5% 0;
 
     background-position: center;
     background-size: cover;
@@ -208,72 +209,72 @@
     align-items: center;
 
     @media only screen and (max-width: $bp-small) {
-      height: 25rem;
-      width: 32rem;
+      height: 20rem;
+      width: 95%;
     }
 
     &--1 {
       background-image: url(../../images/story/story--1.jpg);
 
-      margin-top: 10rem;
-      margin-left: 15%;
+      // margin-top: 10rem;
+      // margin-left: 15%;
 
-      justify-content: flex-start;
+      // justify-content: flex-start;
 
       @media only screen and (max-width: $bp-medium) {
-        margin-left: 5%;
+        // margin-left: 5%;
       }
       @media only screen and (max-width: $bp-small) {
-        margin-left: 2%;
-        margin-top: 5rem;
+        // margin-left: 2%;
+        // margin-top: 5rem;
       }
     }
     &--2 {
       background-image: url(../../images/story/story--2.jpg);
 
-      margin-left: 30%;
-      margin-top: 5rem;
-      z-index: 2;
+      // margin-left: 30%;
+      // margin-top: 5rem;
+      // z-index: 2;
 
       @media only screen and (max-width: $bp-medium) {
-        margin-left: 15%;
+        // margin-left: 15%;
       }
       @media only screen and (max-width: $bp-small) {
-        margin-left: 6%;
+        // margin-left: 6%;
       }
     }
     &--3 {
       background-image: url(../../images/story/story--3.jpg);
 
-      margin-left: 15%;
-      margin-top: -5rem;
-      z-index: 1;
+      // margin-left: 15%;
+      // margin-top: -5rem;
+      // z-index: 1;
 
       @media only screen and (max-width: $bp-medium) {
-        margin-left: 5%;
+        // margin-left: 5%;
       }
       @media only screen and (max-width: $bp-small) {
-        margin-left: 2%;
+        // margin-left: 2%;
       }
     }
     &--4 {
       background-image: url(../../images/story/story--4.jpg);
 
-      margin-left: 30%;
-      margin-top: 5rem;
+      // margin-left: 30%;
+      // margin-top: 5rem;
 
       @media only screen and (max-width: $bp-medium) {
-        margin-left: 15%;
+        // margin-left: 15%;
       }
       @media only screen and (max-width: $bp-small) {
-        margin-left: 6%;
+        // margin-left: 6%;
       }
     }
   }
 
   &__text {
     height: 100%;
-    width: 40%;
+    width: 50%;
     background-color: rgba($color-secondary, 0.95);
     transition: all 0.2s ease-in;
 
@@ -287,10 +288,7 @@
   width: 100%;
   padding: 2rem 5%;
 
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-}
-.p-hidden {
-  display: none;
 }
