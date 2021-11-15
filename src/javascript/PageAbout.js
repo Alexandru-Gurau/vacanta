@@ -1,25 +1,28 @@
-const expandCardText = () => {
-  const aboutCard = document.querySelectorAll('.about-story__card');
-  const aboutCardText = document.getElementsByClassName('about-story__text');
-  const header = document.getElementsByClassName('headerJS');
-  const paragraph = document.getElementsByClassName('paragraphJS');
-  const aboutStory = document.querySelector('.about-story');
-  console.log(paragraph);
+const openCard = document.querySelectorAll('.open-card-text');
+const closeCard = document.querySelectorAll('.close-card-text');
 
-  aboutCard.forEach((el, i) => {
-    // aboutStory.addEventListener('click', () => {
-    //   paragraph[i].style.display = 'none';
-    // });
-    el.addEventListener('mouseover', function () {
-      aboutCardText[i].style.width = '100%';
-      header[i].style.display = 'none';
-      paragraph[i].style.display = 'flex';
-    });
-    el.addEventListener('mouseout', function () {
-      aboutCardText[i].style.width = '50%';
-      header[i].style.display = 'block';
-      paragraph[i].style.display = 'none';
-    });
+const card = document.querySelectorAll('.about-story__card');
+const cardText = document.getElementsByClassName('about-story__text');
+const header = document.getElementsByClassName('headerJS');
+const paragraph = document.getElementsByClassName('paragraph-card');
+
+openCard.forEach((el, i) => {
+  el.addEventListener('click', () => {
+    cardText[i].style.width = '100%';
+    header[i].style.display = 'none';
+    openCard[i].style.display = 'none';
+    setTimeout(() => {
+      closeCard[i].style.display = 'block';
+      paragraph[i].style.display = 'block';
+    }, 400);
   });
-};
-expandCardText();
+});
+closeCard.forEach((el, i) => {
+  el.addEventListener('click', () => {
+    cardText[i].style.width = '50%';
+    header[i].style.display = 'block';
+    openCard[i].style.display = 'block';
+    closeCard[i].style.display = 'none';
+    paragraph[i].style.display = 'none';
+  });
+});

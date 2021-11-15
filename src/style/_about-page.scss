@@ -231,20 +231,12 @@
     height: 100%;
     width: 50%;
     background-color: rgba($color-secondary, 0.95);
-    // transition: all 0.2s ease-in;
+    padding: 1rem 5%;
+    transition: all 0.2s ease-in;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
   }
-}
-.paragraphJS {
-  height: 100%;
-  width: 100%;
-  padding: 2rem 5%;
-  // transition: all 0.2s ease-in;
-
-  display: none;
-  justify-content: center;
-  align-items: center;
 }
