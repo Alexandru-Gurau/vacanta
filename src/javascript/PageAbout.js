@@ -19,7 +19,7 @@ openCard.forEach((el, i) => {
 });
 closeCard.forEach((el, i) => {
   el.addEventListener('click', () => {
-    cardText[i].style.width = '50%';
+    cardText[i].style.width = 'fit-content';
     header[i].style.display = 'block';
     openCard[i].style.display = 'block';
     closeCard[i].style.display = 'none';

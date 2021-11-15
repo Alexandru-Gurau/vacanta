@@ -83,6 +83,8 @@
   &__picture {
     height: 100%;
     width: 40%;
+    border: 10px solid white;
+    border-radius: 5px;
 
     background-position: center;
     background-size: cover;
@@ -229,7 +231,8 @@
 
   &__text {
     height: 100%;
-    width: 50%;
+    // width: 50%;
+    width: fit-content;
     background-color: rgba($color-secondary, 0.95);
     padding: 1rem 5%;
     transition: all 0.2s ease-in;
