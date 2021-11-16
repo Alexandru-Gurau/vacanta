@@ -14,7 +14,7 @@ openCard.forEach((el, i) => {
     setTimeout(() => {
       closeCard[i].style.display = 'block';
       paragraph[i].style.display = 'block';
-    }, 400);
+    }, 100);
   });
 });
 closeCard.forEach((el, i) => {
