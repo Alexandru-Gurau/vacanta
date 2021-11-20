@@ -1,6 +1,14 @@
-.about-welcome {
+.about-navigation {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-welcome {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
 
   height: 60rem;
   width: 100%;
@@ -34,7 +42,7 @@
 }
 .about-intro {
   grid-column: 1 / -1;
-  grid-row: 3 / 4;
+  grid-row: 4 / 5;
 
   height: 30rem;
   width: 100%;
@@ -58,10 +66,10 @@
   }
 }
 .about-team {
-  grid-row: 4 / 5;
+  grid-row: 5 / 6;
 }
 .about-clients {
-  grid-row: 5 / 6;
+  grid-row: 6 / 7;
 }
 
 .about-us {
@@ -173,7 +181,7 @@
 }
 .about-story {
   grid-column: 1 / -1;
-  grid-row: 6 / 7;
+  grid-row: 7 / 8;
 
   width: 100%;
   height: auto;
@@ -245,7 +253,7 @@
 
 .about-testimonial {
   grid-column: 1 / -1;
-  grid-row: 7 / 8;
+  grid-row: 8 / 9;
 
   width: 100%;
   height: auto;
