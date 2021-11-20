@@ -2,5 +2,20 @@
   grid-column: 1 / -1;
   grid-row: 3 / 4;
 
-  height: 60rem;
+  height: 50rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    height: 46rem;
+    width: 100rem;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+
+    outline: 1rem solid white;
+  }
 }
