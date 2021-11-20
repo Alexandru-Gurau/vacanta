@@ -9,13 +9,91 @@
   justify-content: center;
   align-items: center;
 
-  &__box {
-    height: 46rem;
-    width: 100rem;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+  background-image: url(../../images/wallpaper--11.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contact {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
 
-    outline: 1rem solid white;
+  height: 30rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    height: 40rem;
+    width: 80rem;
+    border-radius: 3px;
+    box-shadow: $box-shandow;
+    margin-top: -50rem;
+    background-color: $color-secondary;
+
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 60rem;
+      width: 95%;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__message {
+    height: 100%;
+    width: 60%;
+  }
+  &__info {
+    height: 100%;
+    width: 40%;
+    background-color: $color-tertiary;
+    padding: 5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: auto;
+      width: 100%;
+      padding: 2rem 10%;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: white;
+      letter-spacing: 1.6px;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      color: white;
+      vertical-align: middle;
+    }
+
+    &__box {
+      height: 5rem;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  &-img {
+    height: 3rem;
+    width: auto;
+    margin-right: 2rem;
   }
 }
