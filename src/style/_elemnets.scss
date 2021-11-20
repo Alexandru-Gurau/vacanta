@@ -18,3 +18,12 @@
     width: 40rem;
   }
 }
+// NAVIGATION
+.my-navigation {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
