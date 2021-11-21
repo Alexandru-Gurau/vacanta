@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/style/main.scss" />
-    <script src="../src/javascript/PageAbout.js" defer></script>
+    <script src="../src/javascript/PageContact.js" defer></script>
     <title>Contact us</title>
   </head>
   <body>
@@ -22,10 +22,13 @@
     <section class="contact">
       <div class="contact__box">
         <div class="contact__message">
-          <h2 class="header header__contact text-color-tertiary">
+          <h2
+            class="header header__contact text-color-tertiary"
+            id="header-contact-message"
+          >
             Send message
           </h2>
-          <form action="#">
+          <form action="#" id="form-contact-message">
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Email" />
             <textarea
@@ -35,8 +38,16 @@
               rows="5"
               placeholder="your message"
             ></textarea>
-            <button class="button-message">send</button>
+            <button class="button-message" id="button-contact-message">
+              send
+            </button>
           </form>
+          <h2
+            class="header header__contact text-color-tertiary message-hidden"
+            id="messageHidden"
+          >
+            Thank you for your message 😀
+          </h2>
         </div>
         <div class="contact__info">
           <h2 class="header header__contact text-white">Contact information</h2>
