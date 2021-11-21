@@ -38,6 +38,14 @@
   &__desc {
     color: rgba($color-text-dark, 0.6);
   }
+  &__contact {
+    font-size: 2rem;
+    letter-spacing: 1.6px;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .message {
@@ -76,6 +84,9 @@
 
 .text-white {
   color: white;
+}
+.text-color-tertiary {
+  color: $color-tertiary;
 }
 .p-small {
   font-size: 1.4rem;

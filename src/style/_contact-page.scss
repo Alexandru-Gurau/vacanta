@@ -13,6 +13,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media only screen and (max-width: $bp-small) {
+    height: 40rem;
+  }
 }
 .contact {
   grid-column: 1 / -1;
@@ -36,18 +40,65 @@
     display: flex;
 
     @media only screen and (max-width: $bp-medium) {
-      height: 60rem;
+      height: 70rem;
       width: 95%;
+      margin-top: -20rem;
 
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
+    @media only screen and (max-width: $bp-small) {
+      height: 60rem;
+    }
   }
   &__message {
     height: 100%;
     width: 60%;
+    padding: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 90%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      padding: 4rem 1rem;
+    }
+
+    form {
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      input {
+        border: none;
+        border-bottom: 1px solid $color-tertiary;
+        height: 3rem;
+        padding: 0 1rem;
+        color: $color-tertiary;
+      }
+      input::placeholder {
+        color: $color-tertiary;
+      }
+      textarea {
+        border: none;
+        border-bottom: 1px solid $color-tertiary;
+        padding: 0 1rem;
+        color: $color-tertiary;
+      }
+      textarea::placeholder {
+        color: $color-tertiary;
+      }
+    }
   }
+
   &__info {
     height: 100%;
     width: 40%;
@@ -63,16 +114,6 @@
       height: auto;
       width: 100%;
       padding: 2rem 10%;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: white;
-      letter-spacing: 1.6px;
-
-      @media only screen and (max-width: $bp-medium) {
-        margin-bottom: 2rem;
-      }
     }
 
     a {

@@ -21,9 +21,25 @@
     <section class="map"></section>
     <section class="contact">
       <div class="contact__box">
-        <div class="contact__message"></div>
+        <div class="contact__message">
+          <h2 class="header header__contact text-color-tertiary">
+            Send message
+          </h2>
+          <form action="#">
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+            <textarea
+              name="message"
+              id="noid"
+              cols="30"
+              rows="5"
+              placeholder="your message"
+            ></textarea>
+            <button class="button-message">send</button>
+          </form>
+        </div>
         <div class="contact__info">
-          <h2 class="header">Contact information</h2>
+          <h2 class="header header__contact text-white">Contact information</h2>
 
           <a href="#" class="contact__info__box"
             ><img src="../icons/map.svg" alt="map" class="contact-img" /> Laguna

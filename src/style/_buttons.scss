@@ -194,3 +194,30 @@
 .button-addToCard:focus {
   outline: 0;
 }
+
+// Contact page
+.button-message {
+  align-self: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: none;
+  background-color: $color-tertiary;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: $button-shadow;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.button-message:hover {
+  box-shadow: $button-shadow-hover;
+  transform: translateY(-5px);
+}
+.button-message:active {
+  box-shadow: $button-shadow;
+  transform: translateY(3px);
+}
+.button-message:focus {
+  outline: 0;
+}
