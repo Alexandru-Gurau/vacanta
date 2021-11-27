@@ -19,9 +19,9 @@
   "homepage": "https://github.com/Alexandru-Gurau/vacanta#readme",
   "devDependencies": {
     "@parcel/transformer-image": "^2.0.0-rc.0",
-    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1",
-    "sass": "^1.42.1"
+    "sass": "^1.43.5"
   },
   "dependencies": {
     "git": "^0.1.5",
