@@ -1,7 +1,7 @@
 {
   "name": "vacanta",
   "version": "1.0.0",
-  "description": "",
+  "description": "trip site",
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
@@ -26,5 +26,6 @@
   "dependencies": {
     "git": "^0.1.5",
     "live-server": "^1.2.1"
-  }
+  },
+  "main": "index.js"
 }
