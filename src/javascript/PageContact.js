@@ -32,7 +32,7 @@ const messageSend = () => {
               class="header header__contact text-color-tertiary"
               id="messageHidden"
             >
-              Please complete all inputs.
+              Complete all inputs 😀
             </h2>
   `;
     return;
@@ -42,7 +42,7 @@ const messageSend = () => {
               class="header header__contact text-color-tertiary"
               id="messageHidden"
             >
-              Thank you for message.
+              Thank you for message. 🥳
             </h2>
   `;
   }
